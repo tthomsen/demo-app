@@ -1,7 +1,7 @@
 FROM node:16-alpine AS deps
 
 WORKDIR /app
-COPY demo-app/ .
+COPY code/ .
 RUN yarn install --frozen-lockfile
 
 FROM node:16-alpine AS BUILD_IMAGE
