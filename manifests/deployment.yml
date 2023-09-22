@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: tthomsendemoapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tthomsendemoapp
+  template:
+    metadata:
+      labels:
+        app: tthomsendemoapp 
+    spec:
+      containers:
+        - name: tthomsendemoapp 
+          image: tthomsencr.azurecr.io/tthomsendemoapp
+          ports:
+          - containerPort: 3000
