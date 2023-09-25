@@ -16,8 +16,8 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    cd src/ && npm install -g webpack webpack-cli --save-dev
-    cd src/ && npm install
-    cd src/ && npm run build
-    cd src/ && npx webpack --config webpack.config.js
+    cd code/ && npm install -g webpack webpack-cli --save-dev
+    cd code/ && npm install
+    cd code/ && npm run build
+    cd code/ && npx webpack --config webpack.config.js
   displayName: 'npm install, run webpack'
